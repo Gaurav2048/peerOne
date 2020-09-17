@@ -11,6 +11,7 @@ const VideoCall = () => {
           height: '20px',
           marginLeft: '15px',
           marginRight: '15px',
+          cursor: 'pointer',
         }}
       />
     </div>
