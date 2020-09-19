@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const ChatHead = ({ user }) => {
+const ChatHead = ({ user, onClick }) => {
   const [mouseEnter, set] = useState(false);
   return (
     <div
@@ -14,6 +14,7 @@ const ChatHead = ({ user }) => {
         borderBottom: '1px solid #dddddd ',
         cursor: 'pointer',
       }}
+      onClick={(e) => onClick(user)}
       onMouseEnter={(e) => set(true)}
       onMouseLeave={(e) => set(false)}
     >
