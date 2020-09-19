@@ -2,7 +2,7 @@ import React from 'react';
 import AudioCall from './AudioCall';
 import VideoCall from './VideoCall';
 
-const HeadSection = () => {
+const HeadSection = ({ user }) => {
   return (
     <div
       style={{
@@ -18,7 +18,7 @@ const HeadSection = () => {
     >
       <div>
         <div style={{ color: '#000', fontWeight: 'bold', fontSize: '30px' }}>
-          John Doe
+          {user.name}
         </div>
         <div
           style={{
