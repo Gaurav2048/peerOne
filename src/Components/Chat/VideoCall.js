@@ -1,7 +1,7 @@
 import React from 'react';
 import video from '../../assets/video-camera.png';
 
-const VideoCall = () => {
+const VideoCall = ({ onClick }) => {
   return (
     <div>
       <img
@@ -13,6 +13,7 @@ const VideoCall = () => {
           marginRight: '15px',
           cursor: 'pointer',
         }}
+        onClick={onClick}
       />
     </div>
   );
