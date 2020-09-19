@@ -11,11 +11,12 @@ const Login = ({ props }) => {
     e.preventDefault();
     auth
       .signInWithEmailAndPassword(email, password)
-      .then((user) => {
-        console.log(user);
+      .then((data) => {
+        console.log(data);
+        console.log(data.user.uid);
       })
       .catch((e) => {
-        console.log(e);
+        e.code === 'auth/user-not-found' && navigate('/register');
       });
   };
 

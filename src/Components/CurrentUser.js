@@ -25,7 +25,7 @@ const CurrentUser = () => {
             border: '2px solid #dddddd',
             zIndex: 0,
           }}
-          src="https://images.pexels.com/photos/1431282/pexels-photo-1431282.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+          src="https://images.pexels.com/photos/735552/pexels-photo-735552.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
         />
         <div
           style={{
@@ -34,7 +34,7 @@ const CurrentUser = () => {
             backgroundColor: '#0f0',
             border: '2px solid #dddddd',
             borderRadius: '10px',
-            marginLeft: '40px',
+            marginLeft: '42px',
             marginTop: '-18px',
             zIndex: 100,
             position: 'relative',
