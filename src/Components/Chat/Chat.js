@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Chat = () => {
+const Chat = ({ vdref }) => {
   return (
     <div
       style={{
@@ -10,7 +10,12 @@ const Chat = () => {
         height: '76vh',
         border: '1px solid #cccccc',
       }}
-    ></div>
+    >
+      <video
+        ref={vdref}
+        style={{ width: '100%', height: '100%', backgroundColor: '#cbcbcb' }}
+      ></video>
+    </div>
   );
 };
 
