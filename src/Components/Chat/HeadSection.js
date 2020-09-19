@@ -2,7 +2,7 @@ import React from 'react';
 import AudioCall from './AudioCall';
 import VideoCall from './VideoCall';
 
-const HeadSection = ({ user }) => {
+const HeadSection = ({ user, onVideoClick }) => {
   return (
     <div
       style={{
@@ -38,7 +38,7 @@ const HeadSection = ({ user }) => {
         }}
       >
         <AudioCall />
-        <VideoCall />
+        <VideoCall onClick={(e) => onVideoClick(user.peerId)} />
       </div>
     </div>
   );
