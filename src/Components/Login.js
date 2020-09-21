@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Form, Button, Container, Col } from 'react-bootstrap';
+import { auth } from '../firebase';
 import { navigate } from '@reach/router';
 
 const Login = ({ props }) => {
@@ -8,15 +9,15 @@ const Login = ({ props }) => {
 
   const onStartAuth = (e) => {
     e.preventDefault();
-    // auth
-    //   .signInWithEmailAndPassword(email, password)
-    //   .then((user) => {
-    //     console.log(user);
-    //   })
-    //   .catch((e) => {
-    //     console.log(e);
-    //   });
-    navigate('/');
+    auth
+      .signInWithEmailAndPassword(email, password)
+      .then((data) => {
+        console.log(data);
+        console.log(data.user.uid);
+      })
+      .catch((e) => {
+        e.code === 'auth/user-not-found' && navigate('/register');
+      });
   };
 
   const onChange = (e) => {
